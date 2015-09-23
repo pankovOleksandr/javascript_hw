@@ -1,0 +1,10 @@
+section {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  width: 100px;
+}
