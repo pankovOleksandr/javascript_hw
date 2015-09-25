@@ -42,22 +42,42 @@ function fizzBuzzModified (start, end) {
 	}
 }
 
+
+// function drawDesk (size, el) {
+// 	size = +prompt('Введите число для размера доски', 8);
+// 	el = '#';
+// 	var result = "";
+// 	for (var row = 0; row < size; row++) {	
+// 		for (var column = 0; column < size; column++) {
+// 			result += el;
+// 			el === ' ' ? el = "#" : el = ' ';
+// 		};
+// 	result += '\n';
+// 	el === ' ' ? el = "#" : el = ' ';
+// 	};
+
+// 	console.log(result);
+// }
+
+// ERROR - work only for even size
+
 function drawDesk (size, el) {
 	size = +prompt('Введите число для размера доски', 8);
 	el = '#';
 	var result = "";
 	for (var row = 0; row < size; row++) {	
 		for (var column = 0; column < size; column++) {
-			result += el;
-			el === ' ' ? el = "#" : el = ' ';
+			if ( (row + column) % 2 === 0) {
+				result += " ";
+			} else {
+				result += el;
+			};
 		};
 	result += '\n';
-	el === ' ' ? el = "#" : el = ' ';
-	};
+};
 
 	console.log(result);
 }
-
 function pow(x, n) {
 	x = +prompt('Введите число, взводимое в степень');
 	n = +prompt('Введите в какую степень возводить число '+x);
@@ -65,5 +85,5 @@ function pow(x, n) {
 	for (var i = 0; i < n; i++) {
 		result *= x; 
 	};
-	console.log(n + '-ая степень числа ' + x + ' равна ' + result);
+	alert(n + '-ая степень числа ' + x + ' равна ' + result);
 }
