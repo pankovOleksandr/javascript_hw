@@ -46,11 +46,7 @@ function task2() {
 
 //Проверяем длину и обрезаем при необходимости
 function cutString (s, length) {
-	if (s.length > length) {
-		return s.slice(0, length);
-	} else {
-		return s; 
-	}  
+	return s.length > length ? s.slice(0, length) : s;
 }
 // Добавляем в конец строки символы
 function addSymbols (string, symb) {
