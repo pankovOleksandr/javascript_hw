@@ -8,6 +8,7 @@ function isNumeric(n) {
 }
 
 function fib(n) {
+	var result = 0;
 	if (n <= 1) {
 		return n;
 	} else {
@@ -16,7 +17,7 @@ function fib(n) {
 }
 
 function task1(num) {
-	num = prompt('Enter a number', 3);
+	num = num || prompt('Enter a number', 3);
 	if( isNumeric(num) ) {
 		console.log( fib(num) );
 	} else {
