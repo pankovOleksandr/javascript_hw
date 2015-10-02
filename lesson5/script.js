@@ -17,15 +17,20 @@ function multiplyNumeric(obj) {
 }
 
 function getNum() {
-	var arr = [];
-	var num = 0;
+	var arr = [],
+		num = 0,
+		sum = 0;
 	do {
 		num = prompt("Введите число для заполнения массива", num);
 		if (isNumeric(num)) {
 			arr.push(+num);
 		}
     } while (num !== null && num !== "");
-    return arr;
+    for (var i = 0; i < arr.length; i++) {
+    	sum += arr[i];
+    };
+
+    return sum;
 }
 
 function task2() {
