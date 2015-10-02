@@ -1,10 +1,19 @@
 "use strict"
-// JUST WITHOUT TASK1 (coming soon-))
-
-
 
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function maxPlayer(obj) {
+	var max = 0;
+	var name='';
+	for (var key in obj) {
+		if (obj[key] > max) {
+			max = obj[key];
+			name = key;
+		}
+	};
+	return name;
 }
 
 function multiplyNumeric(obj) {
@@ -31,6 +40,15 @@ function getNum() {
     };
 
     return sum;
+}
+function task1() {
+	var tasksCompleted = {
+	  'Anna': 29,
+	  'Serg': 35,
+	  'Elena': 1,
+	  'Anton': 99
+	};
+	console.log(maxPlayer(tasksCompleted));
 }
 
 function task2() {
