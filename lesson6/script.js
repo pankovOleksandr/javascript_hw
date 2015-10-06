@@ -26,6 +26,29 @@ function task2() {
 	return console.log("arr : " + arr + "\narrsorted : " + arrSorted);
 }
 
+function task3() {
+	var arr = [1, 2, 3, 4, 5];
+	console.log( arr.sort( function(){
+		return (Math.random() < 0.5) ? -1 :1;
+	} ) );	
+}
+
+function task4() {
+	var vasya = { name: 'Вася', age: 23 };
+	var masha = { name: 'Маша', age: 18 };
+	var vovochka = { name: 'Вовочка', age: 6 };
+
+	var people = [ vasya , masha , vovochka ];
+
+	function objectSort(arr) {
+		return arr.sort( function(a,b) {
+			return a.age > b.age;
+		} );
+	}
+	
+	console.log( objectSort(people) );
+}
+
 function task5() {
 	console.log(isPal('Anna')); // true
 	console.log(isPal('Вася')); //false
