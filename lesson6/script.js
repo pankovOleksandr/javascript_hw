@@ -59,10 +59,8 @@ function task5() {
 	function isPal(string) {
 		var str, 
 			strReversed;
-		// str = string.toLowerCase().replace(/ /g,"");  Подсмотренно в гугле
 
-		//строка -> массив слов-> строка без пробелов -> массив букв -> строка букв
-		str = string.toLowerCase().split(" ").join("").split("").join("");
+		str = string.toLowerCase().split(" ").join("");
 		strReversed = str.split("").reverse().join("");
 		if (str === strReversed) {
 			return true;
