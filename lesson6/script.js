@@ -18,6 +18,7 @@ function task1() {
 		obj.className = classArr.join(" ");
 	}
 }
+function
 
 function task2() {
 	var arr = ['HTML', 'JavaScript', 'CSS'],
